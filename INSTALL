@@ -1,0 +1,9 @@
+Building RussiaCoin
+
+See doc/readme-qt.rst for instructions on building RussiaCoin QT,
+the intended-for-end-users, nice-graphical-interface, reference
+implementation of RussiaCoin.
+
+See doc/build-*.txt for instructions on building RussiaCoind,
+the intended-for-services, no-graphical-interface, reference
+implementation of RussiaCoin.
