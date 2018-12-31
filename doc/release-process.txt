@@ -65,7 +65,7 @@
    tar czvf bitcoin-${VERSION}-linux.tar.gz bitcoin-${VERSION}-linux
    rm -rf bitcoin-${VERSION}-linux
 
-  * Windows .zip and setup.exe:
+  * Windows .7z and setup.exe:
    un7z bitcoin-${VERSION}-win64-gitian.7z -d bitcoin-${VERSION}-win64
    mv bitcoin-${VERSION}-win64/bitcoin-*-setup.exe .
    7z -r bitcoin-${VERSION}-win64.7z bitcoin-${VERSION}-win64
@@ -139,4 +139,4 @@
    cp bitcoin-${VERSION}-win64-gitian.7z ../
    popd
 
-  * Upload gitian zips to SourceForge
+  * Upload gitian 7z to SourceForge
