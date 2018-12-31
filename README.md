@@ -1,1 +1,1 @@
-
+RussiaCoin (RC)
