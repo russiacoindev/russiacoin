@@ -1,4 +1,4 @@
-Bitcoin-qt: Qt4 GUI for Bitcoin
+RussiaCoin-qt: Qt5 GUI for RussiaCoin
 ===============================
 
 Build instructions
@@ -7,20 +7,12 @@ Build instructions
 Debian
 -------
 
-First, make sure that the required packages for Qt4 development of your
-distribution are installed.
-
-On recent Ubuntu releases, the `libdb18.1++-dev` package is not in the default
-repositories. However it's in the bitcoin repository, which we can add
-with:
-
-    apt-add-repository ppa:bitcoin/bitcoin
-
-Then we need to make sure our build environment is up to date. For Debian and Ubuntu:
+First, make sure that the required packages for Qt5 development of your
+distribution are installed,for Debian and Ubuntu these are:
 
 ::
 
-    apt-get install qt4-qmake libqt4-dev build-essential libboost-dev libboost-system-dev \
+    apt-get install qt5-qmake libqt5-dev build-essential libboost-dev libboost-system-dev \
         libboost-filesystem-dev libboost-program-options-dev libboost-thread-dev \
         libssl-dev libdb18.1++-dev libminiupnpc-dev libminiupnpc17
 
@@ -31,9 +23,9 @@ then execute the following:
     qmake
     make
 
-Alternatively, install Qt Creator and open the `bitcoin-qt.pro` file.
+Alternatively, install Qt Creator and open the `russiacoin-qt.pro` file.
 
-An executable named `bitcoin-qt` will be built.
+An executable named `russiacoin-qt` will be built.
 
 
 Windows
@@ -43,16 +35,22 @@ Windows build instructions:
 
 - Download the `QT Windows SDK`_ and install it. You don't need the Symbian stuff, just the desktop Qt.
 
-- Download and extract the `dependencies archive`_  [#]_, or compile openssl, boost and dbcxx yourself.
-
-- Copy the contents of the folder "deps" to "X:\\QtSDK\\mingw", replace X:\\ with the location where you installed the Qt SDK. Make sure that the contents of "deps\\include" end up in the current "include" directory.
+- Compile openssl, boost and dbcxx.
 
 - Open the .pro file in QT creator and build as normal (ctrl-B)
 
-.. _`QT Windows SDK`: http://qt.nokia.com/downloads/sdk-windows-cpp
-.. _`dependencies archive`: https://download.visucore.com/bitcoin/qtgui_deps_1.zip
-.. [#] PGP signature: https://download.visucore.com/bitcoin/qtgui_deps_1.zip.sig (signed with RSA key ID `610945D0`_)
-.. _`610945D0`: http://pgp.mit.edu:11371/pks/lookup?op=get&search=0x610945D0
+.. _`QT Windows SDK`: Windows
+--------
+
+Windows build instructions:
+
+- Download the `QT Windows SDK`_ and install it. You don't need the Symbian stuff, just the desktop Qt.
+
+- Compile openssl, boost and dbcxx.
+
+- Open the .pro file in QT creator and build as normal (ctrl-B)
+
+.. _`QT Windows SDK`: http://qt-project.org/downloads
 
 
 Mac OS X
@@ -71,7 +69,30 @@ Mac OS X
 
 - Open the .pro file in Qt Creator and build as normal (cmd-B)
 
-.. _`Qt Mac OS X SDK`: http://qt.nokia.com/downloads/sdk-mac-os-cpp
+.. _`Qt Mac OS X SDK`: http://qt-project.org/downloads
+.. _`MacPorts`: http://www.macports.org/install.php
+
+
+Build configuration options
+
+
+Mac OS X
+--------
+
+- Download and install the `Qt Mac OS X SDK`_. It is recommended to also install Apple's Xcode with UNIX tools.
+
+- Download and install `MacPorts`_.
+
+- Execute the following commands in a terminal to get the dependencies:
+
+::
+
+	sudo port selfupdate
+	sudo port install boost db69 miniupnpc
+
+- Open the .pro file in Qt Creator and build as normal (cmd-B)
+
+.. _`Qt Mac OS X SDK`: http://qt-project.org/downloads
 .. _`MacPorts`: http://www.macports.org/install.php
 
 
@@ -81,7 +102,7 @@ Build configuration options
 UPNnP port forwarding
 ---------------------
 
-To use UPnP for port forwarding behind a NAT router (recommended, as more connections overall allow for a faster and more stable bitcoin experience), pass the following argument to qmake:
+To use UPnP for port forwarding behind a NAT router (recommended, as more connections overall allow for a faster and more stable russiacoin experience), pass the following argument to qmake:
 
 ::
 
@@ -129,7 +150,7 @@ flag to qmake to control this:
 Berkely DB version warning
 ==========================
 
-A warning for people using the *static binary* version of Bitcoin on a Linux/UNIX-ish system (tl;dr: **Berkely DB databases are not forward compatible**).
+A warning for people using the *static binary* version of RussiaCoin  on a Linux/UNIX-ish system (tl;dr: **Berkely DB databases are not forward compatible**).
 
 The static binary version of Bitcoin is linked against libdb18.1 (see also `this Debian issue`_).
 
@@ -146,7 +167,7 @@ Ubuntu 11.10 warning
 ====================
 
 Ubuntu 11.10 has a package called 'qt-at-spi' installed by default.  At the time of writing, having that package
-installed causes bitcoin-qt to crash intermittently.  The issue has been reported as `launchpad bug 857790`_, but
+installed causes russiacoin-qt to crash intermittently.  The issue has been reported as `launchpad bug 857790`_, but
 isn't yet fixed.
 
 Until the bug is fixed, you can remove the qt-at-spi package to work around the problem, though this will presumably
