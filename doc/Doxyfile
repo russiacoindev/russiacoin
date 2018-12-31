@@ -4,7 +4,7 @@
 #    doxygen doc/Doxyfile
 
 # This file describes the settings to be used by the documentation system
-# doxygen (www.doxygen.org) for a project
+# doxygen (http://www.doxygen.nl/) for a project
 #
 # All text after a hash (#) is considered a comment and will be ignored
 # The format is:
