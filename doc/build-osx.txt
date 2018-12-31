@@ -27,7 +27,7 @@ but you can get the current version from https://developer.apple.com/
 
 1.  Clone the github tree to get the source code:
 
-git clone https://github.com/laputaria/RC.git russiacoin
+git clone https://github.com/Laputaria/RC.git russiacoin
 
 2.  Download and install MacPorts from https://www.macports.org/
 
