@@ -10,7 +10,7 @@ Debian
 First, make sure that the required packages for Qt4 development of your
 distribution are installed.
 
-On recent Ubuntu releases, the `libdb4.8++-dev` package is not in the default
+On recent Ubuntu releases, the `libdb18.1++-dev` package is not in the default
 repositories. However it's in the bitcoin repository, which we can add
 with:
 
@@ -22,7 +22,7 @@ Then we need to make sure our build environment is up to date. For Debian and Ub
 
     apt-get install qt4-qmake libqt4-dev build-essential libboost-dev libboost-system-dev \
         libboost-filesystem-dev libboost-program-options-dev libboost-thread-dev \
-        libssl-dev libdb4.8++-dev libminiupnpc-dev libminiupnpc8
+        libssl-dev libdb18.1++-dev libminiupnpc-dev libminiupnpc17
 
 then execute the following:
 
@@ -131,12 +131,12 @@ Berkely DB version warning
 
 A warning for people using the *static binary* version of Bitcoin on a Linux/UNIX-ish system (tl;dr: **Berkely DB databases are not forward compatible**).
 
-The static binary version of Bitcoin is linked against libdb4.8 (see also `this Debian issue`_).
+The static binary version of Bitcoin is linked against libdb18.1 (see also `this Debian issue`_).
 
-Now the nasty thing is that databases from 5.X are not compatible with 4.X.
+Now the nasty thing is that databases from 18.X are not compatible with 4.X.
 
-If the globally installed development package of Berkely DB installed on your system is 5.X, any source you
-build yourself will be linked against that. The first time you run with a 5.X version the database will be upgraded,
+If the globally installed development package of Berkely DB installed on your system is 18.X, any source you
+build yourself will be linked against that. The first time you run with a 18.X version the database will be upgraded,
 and 4.X cannot open the new format. This means that you cannot go back to the old statically linked version without
 significant hassle!
 
