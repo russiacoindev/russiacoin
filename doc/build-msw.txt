@@ -46,7 +46,7 @@ OpenSSL
 -------
 MSYS shell:
 un-tar sources with MSYS 'tar xfz' to avoid issue with symlinks (OpenSSL ticket 2377)
-change 'MAKE' env. variable from 'C:\MinGW32\bin\mingw32-make.exe' to '/c/MinGW32/bin/mingw32-make.exe'
+change 'MAKE' env. variable from 'C:\MinGW64\bin\mingw64-make.exe' to '/c/MinGW64/bin/mingw64-make.exe'
 
 cd /c/openssl-1.0.2q-mgw
 ./config
@@ -80,5 +80,5 @@ RussiaCoin (RC)
 -------
 DOS prompt:
 cd \bitcoin\src
-mingw32-make -f makefile.mingw
+mingw64-make -f makefile.mingw
 strip russiacoinrc.exe
