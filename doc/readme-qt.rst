@@ -36,10 +36,14 @@ Windows build instructions:
 - Download the `QT Windows SDK`_ and install it. You don't need the Symbian stuff, just the desktop Qt.
 
 - Compile openssl, boost and dbcxx.
+https://www.openssl.org/source/
+https://dl.bintray.com/boostorg/release/1.69.0/source/
+https://www.oracle.com/technetwork/database/database-technologies/berkeleydb/downloads/index.html
 
 - Open the .pro file in QT creator and build as normal (ctrl-B)
+https://download.qt.io/archive/qt/5.12/5.12.0/single/
 
-.. _`QT Windows SDK`: Windows
+.. _`QT Windows SDK`: http://qt-project.org/downloads
 --------
 
 Windows build instructions:
@@ -47,8 +51,12 @@ Windows build instructions:
 - Download the `QT Windows SDK`_ and install it. You don't need the Symbian stuff, just the desktop Qt.
 
 - Compile openssl, boost and dbcxx.
+https://www.openssl.org/source/
+https://dl.bintray.com/boostorg/release/1.69.0/source/
+https://www.oracle.com/technetwork/database/database-technologies/berkeleydb/downloads/index.html
 
 - Open the .pro file in QT creator and build as normal (ctrl-B)
+https://download.qt.io/archive/qt/5.12/5.12.0/single/
 
 .. _`QT Windows SDK`: http://qt-project.org/downloads
 
@@ -65,7 +73,7 @@ Mac OS X
 ::
 
 	sudo port selfupdate
-	sudo port install boost db48 miniupnpc
+	sudo port install boost db69 miniupnpc
 
 - Open the .pro file in Qt Creator and build as normal (cmd-B)
 
@@ -137,7 +145,7 @@ Generation of QR codes
 -----------------------
 
 libqrencode may be used to generate QRCode images for payment requests. 
-It can be downloaded from http://fukuchi.org/works/qrencode/index.html.en, or installed via your package manager. Pass the USE_QRCODE 
+It can be downloaded from https://fukuchi.org/works/qrencode/, or installed via your package manager. Pass the USE_QRCODE 
 flag to qmake to control this:
 
 +--------------+--------------------------------------------------------------------------+
