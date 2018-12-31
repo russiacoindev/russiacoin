@@ -1734,7 +1734,7 @@ DOT_TRANSPARENT        = NO
 
 # Set the DOT_MULTI_TARGETS tag to YES allow dot to generate multiple output 
 # files in one run (i.e. multiple -o and -T options on the command line). This 
-# makes dot run faster, but since only newer versions of dot (>1.8.10) 
+# makes dot run faster, but since only newer versions of dot (>1.8.15) 
 # support this, this feature is disabled by default.
 
 DOT_MULTI_TARGETS      = NO
