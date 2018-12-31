@@ -2,7 +2,7 @@
 Copyright (c) 2013-2014 RussiaCoin Developers
 
 
-RussiaCoin 0.3.0 BETA
+RussiaCoin 1.3.7
 
 Copyright (c) 2013-2014 RussiaCoin Developers
 Copyright (c) 2013 NovaCoin Developers
