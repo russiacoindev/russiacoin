@@ -47,6 +47,7 @@ Start up the new russiacoind.
 
 
 See the documentation/wiki at the RussiaCoin site:
-  http://russiacoin.info/
+  https://russiacoin.info/
+  https://russiacoin.info/blog/
 for help and more information.
 
