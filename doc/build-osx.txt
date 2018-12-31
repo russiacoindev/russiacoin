@@ -15,7 +15,7 @@ Douglas Huff <dhuff@jrbobdobbs.org>
 See readme-qt.rst for instructions on building Bitcoin QT, the
 graphical user interface.
 
-Tested on 10.12 and 10.13 intel.  PPC is not supported because it's big-endian.
+Tested on 10.14 and 10.14.2 intel.  PPC is not supported because it's big-endian.
 
 All of the commands should be executed in Terminal.app.. it's in
 /Applications/Utilities
