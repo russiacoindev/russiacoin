@@ -1,3 +1,9 @@
-RussiaCoin (RC) join #russiacoin
+RussiaCoin (RC)
+===============
+join
+----
 
-now join #russiacoin
+now join 
+--------
+
+#russiacoin
