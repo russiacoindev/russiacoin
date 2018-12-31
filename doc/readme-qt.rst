@@ -36,8 +36,11 @@ Windows build instructions:
 - Download the `QT Windows SDK`_ and install it. You don't need the Symbian stuff, just the desktop Qt.
 
 - Compile openssl, boost and dbcxx.
+
 https://www.openssl.org/source/
+
 https://dl.bintray.com/boostorg/release/1.69.0/source/
+
 https://www.oracle.com/technetwork/database/database-technologies/berkeleydb/downloads/index.html
 
 - Open the .pro file in QT creator and build as normal (ctrl-B)
@@ -51,8 +54,11 @@ Windows build instructions:
 - Download the `QT Windows SDK`_ and install it. You don't need the Symbian stuff, just the desktop Qt.
 
 - Compile openssl, boost and dbcxx.
+
 https://www.openssl.org/source/
+
 https://dl.bintray.com/boostorg/release/1.69.0/source/
+
 https://www.oracle.com/technetwork/database/database-technologies/berkeleydb/downloads/index.html
 
 - Open the .pro file in QT creator and build as normal (ctrl-B)
