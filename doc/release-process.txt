@@ -1,7 +1,7 @@
 * update translations (ping tcatm on IRC for now)
 
 * update (commit) version in sources
-  bitcoin-qt.pro
+  russiacoin-qt.pro
   src/version.h
   share/setup.nsi
   doc/README*
@@ -16,7 +16,7 @@
 
 * perform gitian builds
 
-  * From a directory containing the bitcoin source, gitian-builder and gitian.sigs
+  * From a directory containing the brussiacoin source, gitian-builder and gitian.sigs
    export SIGNER=(your gitian key, ie bluematt, sipa, etc)
    export VERSION=0.5.1
    cd ./gitian-builder
@@ -32,50 +32,50 @@
    wget 'https://dl.bintray.com/boostorg/release/1.69.0/source/boost_1_69_0.tar.bz2'
    wget 'https://download.qt.io/archive/qt/5.12/5.12.0/single/qt-everywhere-src-5.12.0.tar.xz'
    cd ..
-   ./bin/gbuild ../bitcoin/contrib/gitian-descriptors/boost-win64.yml
+   ./bin/gbuild ../russiacoin/contrib/gitian-descriptors/boost-win64.yml
    cp build/out/boost-win64-1.69.0-gitian.7z inputs/
-   ./bin/gbuild ../bitcoin/contrib/gitian-descriptors/qt-win64.yml
+   ./bin/gbuild ../russiacoin/contrib/gitian-descriptors/qt-win64.yml
    cp build/out/qt-win64-5.12.0-gitian.7z inputs/
-   ./bin/gbuild ../bitcoin/contrib/gitian-descriptors/deps-win64.yml
-   cp build/out/bitcoin-deps-0.0.3.7z inputs/
+   ./bin/gbuild ../russiacoin/contrib/gitian-descriptors/deps-win64.yml
+   cp build/out/russiacoin-deps-0.0.3.7z inputs/
 
-  * Build bitcoind and bitcoin-qt on Linux64, and Win64:
-   ./bin/gbuild --commit bitcoin=v${VERSION} ../bitcoin/contrib/gitian-descriptors/gitian.yml
-   ./bin/gsign --signer $SIGNER --release ${VERSION} --destination ../gitian.sigs/ ../bitcoin/contrib/gitian-descriptors/gitian.yml
+  * Build russiacoind and russiacoin-qt on Linux64, and Win64:
+   ./bin/gbuild --commit russiacoin=v${VERSION} ../russiacoin/contrib/gitian-descriptors/gitian.yml
+   ./bin/gsign --signer $SIGNER --release ${VERSION} --destination ../gitian.sigs/ ../russiacoin/contrib/gitian-descriptors/gitian.yml
    pushd build/out
-   7z -r bitcoin-${VERSION}-linux-gitian.7z *
-   mv bitcoin-${VERSION}-linux-gitian.7z ../../
+   7z -r russiacoin-${VERSION}-linux-gitian.7z *
+   mv russiacoin-${VERSION}-linux-gitian.7z ../../
    popd
-   ./bin/gbuild --commit bitcoin=v${VERSION} ../bitcoin/contrib/gitian-descriptors/gitian-win64.yml
-   ./bin/gsign --signer $SIGNER --release ${VERSION}-win64 --destination ../gitian.sigs/ ../bitcoin/contrib/gitian-descriptors/gitian-win64.yml
+   ./bin/gbuild --commit russiacoin=v${VERSION} ../russiacoin/contrib/gitian-descriptors/gitian-win64.yml
+   ./bin/gsign --signer $SIGNER --release ${VERSION}-win64 --destination ../gitian.sigs/ ../russiacoin/contrib/gitian-descriptors/gitian-win64.yml
    pushd build/out
-   7z -r bitcoin-${VERSION}-win64-gitian.7z *
-   mv bitcoin-${VERSION}-win64-gitian.7z ../../
+   7z -r russiacoin-${VERSION}-win64-gitian.7z *
+   mv russiacoin-${VERSION}-win64-gitian.7z ../../
    popd
 
   Build output expected:
-  1. linux 64-bit binaries + source (bitcoin-${VERSION}-linux-gitian.7z)
-  2. windows 64-bit binary, installer + source (bitcoin-${VERSION}-win64-gitian.7z)
+  1. linux 64-bit binaries + source (russiacoin-${VERSION}-linux-gitian.7z)
+  2. windows 64-bit binary, installer + source (russiacoin-${VERSION}-win64-gitian.7z)
   3. Gitian signatures (in gitian.sigs/${VERSION}[-win64]/(your gitian key)/
 
 * repackage gitian builds for release as stand-alone zip/tar/installer exe
 
   * Linux .tar.gz:
-   un7z bitcoin-${VERSION}-linux-gitian.7z -d bitcoin-${VERSION}-linux
-   tar czvf bitcoin-${VERSION}-linux.tar.gz bitcoin-${VERSION}-linux
-   rm -rf bitcoin-${VERSION}-linux
+   un7z russiacoin-${VERSION}-linux-gitian.7z -d russiacoin-${VERSION}-linux
+   tar czvf russiacoin-${VERSION}-linux.tar.gz russiacoin-${VERSION}-linux
+   rm -rf russiacoin-${VERSION}-linux
 
   * Windows .7z and setup.exe:
-   un7z bitcoin-${VERSION}-win64-gitian.7z -d bitcoin-${VERSION}-win64
-   mv bitcoin-${VERSION}-win64/bitcoin-*-setup.exe .
-   7z -r bitcoin-${VERSION}-win64.7z bitcoin-${VERSION}-win64
-   rm -rf bitcoin-${VERSION}-win64
+   un7z russiacoin-${VERSION}-win64-gitian.7z -d russiacoin-${VERSION}-win64
+   mv russiacoin-${VERSION}-win64/russiacoin-*-setup.exe .
+   7z -r russiacoin-${VERSION}-win64.7z russiacoin-${VERSION}-win64
+   rm -rf russiacoin-${VERSION}-win64
 
 * perform Mac build
   See this blog post for how Gavin set up his build environment to build the OSX
   release; note that a patched version of macdeployqt is not needed anymore, as
   the required functionality and fixes are implemented directly in macdeployqtplus:
-    http://gavintech.blogspot.com/2011/11/deploying-bitcoin-qt-on-osx.html
+    http://gavintech.blogspot.com/2011/11/deploying-russiacoin-qt-on-osx.html
   Gavin also had trouble with the macports py37-appscript package; he
   ended up installing a version that worked with: /usr/bin/easy_install-3.7 appscript
 
@@ -83,22 +83,22 @@
   make
   export QTDIR=/opt/local/share/qt4  # needed to find translations/qt_*.qm files
   T=$(contrib/qt_translations.py $QTDIR/translations src/qt/locale)
-  python3.7.2 contrib/macdeploy/macdeployqtplus Bitcoin-Qt.app -add-qt-tr $T -dmg -fancy contrib/macdeploy/fancy.plist
+  python3.7.2 contrib/macdeploy/macdeployqtplus RussiaCoin-Qt.app -add-qt-tr $T -dmg -fancy contrib/macdeploy/fancy.plist
 
  Build output expected:
-  Bitcoin-Qt.dmg
+  RussiaCoin-Qt.dmg
 
 * upload builds to SourceForge
 
 * create SHA1920SUMS for builds, and PGP-sign it
 
-* update bitcoin.org version
+* update russiacoin.info version
 
 * update forum version
 
-* update wiki download links
+* update wiki download links: https://russiacoin.info/blog/
 
-* update wiki changelog: https://en.bitcoin.it/wiki/Changelog
+* update wiki changelog: https://russiacoin.info/blog/Changelog
 
 * Commit your signature to gitian.sigs:
   pushd gitian.sigs
@@ -112,31 +112,31 @@
 
 * After 3 or more people have gitian-built, repackage gitian-signed zips:
 
-  * From a directory containing bitcoin source, gitian.sigs and gitian zips
+  * From a directory containing russiacoin source, gitian.sigs and gitian zips
    export VERSION=0.5.1
-   mkdir bitcoin-${VERSION}-linux-gitian
-   pushd bitcoin-${VERSION}-linux-gitian
-   un7z ../bitcoin-${VERSION}-linux-gitian.7z
+   mkdir russiacoin-${VERSION}-linux-gitian
+   pushd russiacoin-${VERSION}-linux-gitian
+   un7z ../russiacoin-${VERSION}-linux-gitian.7z
    mkdir gitian
-   cp ../bitcoin/contrib/gitian-downloader/*.pgp ./gitian/
+   cp ../russiacoin/contrib/gitian-downloader/*.pgp ./gitian/
    for signer in $(ls ../gitian.sigs/${VERSION}/); do
-     cp ../gitian.sigs/${VERSION}/${signer}/bitcoin-build.assert ./gitian/${signer}-build.assert
-     cp ../gitian.sigs/${VERSION}/${signer}/bitcoin-build.assert.sig ./gitian/${signer}-build.assert.sig
+     cp ../gitian.sigs/${VERSION}/${signer}/russiacoin-build.assert ./gitian/${signer}-build.assert
+     cp ../gitian.sigs/${VERSION}/${signer}/russiacoin-build.assert.sig ./gitian/${signer}-build.assert.sig
    done
-   7z -r bitcoin-${VERSION}-linux-gitian.7z *
-   cp bitcoin-${VERSION}-linux-gitian.7z ../
+   7z -r russiacoin-${VERSION}-linux-gitian.7z *
+   cp russiacoin-${VERSION}-linux-gitian.7z ../
    popd
-   mkdir bitcoin-${VERSION}-win64-gitian
-   pushd bitcoin-${VERSION}-win64-gitian
-   un7z ../bitcoin-${VERSION}-win64-gitian.7z
+   mkdir russiacoin-${VERSION}-win64-gitian
+   pushd russiacoin-${VERSION}-win64-gitian
+   un7z ../russiacoin-${VERSION}-win64-gitian.7z
    mkdir gitian
-   cp ../bitcoin/contrib/gitian-downloader/*.pgp ./gitian/
+   cp ../russiacoin/contrib/gitian-downloader/*.pgp ./gitian/
    for signer in $(ls ../gitian.sigs/${VERSION}-win64/); do
-     cp ../gitian.sigs/${VERSION}-win64/${signer}/bitcoin-build.assert ./gitian/${signer}-build.assert
-     cp ../gitian.sigs/${VERSION}-win64/${signer}/bitcoin-build.assert.sig ./gitian/${signer}-build.assert.sig
+     cp ../gitian.sigs/${VERSION}-win64/${signer}/russiacoin-build.assert ./gitian/${signer}-build.assert
+     cp ../gitian.sigs/${VERSION}-win64/${signer}/russiacoin-build.assert.sig ./gitian/${signer}-build.assert.sig
    done
-   7z -r bitcoin-${VERSION}-win64-gitian.7z *
-   cp bitcoin-${VERSION}-win64-gitian.7z ../
+   7z -r russiacoin-${VERSION}-win64-gitian.7z *
+   cp russiacoin-${VERSION}-win64-gitian.7z ../
    popd
 
   * Upload gitian 7z to SourceForge
