@@ -79,6 +79,6 @@ cp *.h miniupnpc/
 RussiaCoin (RC)
 -------
 DOS prompt:
-cd \bitcoin\src
+cd \RC\src
 mingw64-make -f makefile.mingw
-strip russiacoinrc.exe
+strip russiacoind.exe
