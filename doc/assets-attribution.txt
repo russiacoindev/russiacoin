@@ -1,3 +1,4 @@
+
 Code: src/strlcpy.h
 Author: Todd C. Miller <Todd.Miller@courtesan.com>
 www.sudo.ws
@@ -59,3 +60,4 @@ Site: https://www.flaticon.com/free-icons/bitcoin-wallet
 Site: https://www.google.ru/search?q=wallet+image+icon+bitcoin&newwindow=1&tbm=isch&tbo=u&source=univ&sa=X&ved=2ahUKEwiEhbWkhMrfAhVHkiwKHbpdBNkQsAR6BAgAEAE
 Site: https://www.google.ru/search?q=wallet+image+icon+bitcoin+crobbo&newwindow=1&tbm=isch&tbo=u&source=univ&sa=X&ved=2ahUKEwj4lualhcrfAhWJiywKHY_bDIIQ7Al6BAgEEBE&biw=1600&bih=758
 License: Public domain
+
