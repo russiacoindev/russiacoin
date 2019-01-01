@@ -1,4 +1,5 @@
-RussiaCoin-qt: Qt5 GUI for RussiaCoin
+
+russiacoin-qt: Qt5 GUI for russiacoin
 ===============================
 
 Build instructions
@@ -192,3 +193,4 @@ disable screen reader functionality for Qt apps:
     sudo apt-get remove qt-at-spi
 
 .. _`launchpad bug 857790`: https://bugs.launchpad.net/ubuntu/+source/qt-at-spi/+bug/857790
+
