@@ -1,10 +1,10 @@
 
-Copyright (c) 2019 RussiaCoin Developers
+Copyright (c) 2019 russiacoin developers
 
 
 RussiaCoin 1.3.7
 
-Copyright (c) 2013-2019 RussiaCoin Developers
+Copyright (c) 2013-2019 russiacoin developers
 Copyright (c) 2013 NovaCoin Developers
 Copyright (c) 2011-2012 Bitcoin Developers
 Distributed under the MIT/X11 software license, see the accompanying
@@ -16,7 +16,7 @@ cryptographic software written by Eric Young (eay@cryptsoft.com).
 
 Intro
 -----
-RussiaCoin is a free open source project derived from NovaCoin, with
+russiacoin is a free open source project derived from NovaCoin, with
 the goal of providing a long-term energy-efficient scrypt-based crypto-currency.
 Built on the foundation of Bitcoin and NovaCoin, innovations such as proof-of-stake
 help further advance the field of crypto-currency.
@@ -33,8 +33,8 @@ applications if necessary.
 The software automatically finds other nodes to connect to.  You can
 enable Universal Plug and Play (UPnP) with your router/firewall
 or forward port 12788 (TCP) to your computer so you can receive
-incoming connections.  RussiaCoin works without incoming connections,
-but allowing incoming connections helps the RussiaCoin network.
+incoming connections.  russiacoin works without incoming connections,
+but allowing incoming connections helps the russiacoin network.
 
 Upgrade
 -------
@@ -46,7 +46,7 @@ russiacoind stop
 Start up the new russiacoind.
 
 
-See the documentation/wiki at the RussiaCoin site:
+See the documentation/wiki at the russiacoin site:
   https://russiacoin.info/
   https://russiacoin.info/blog/
 for help and more information.
