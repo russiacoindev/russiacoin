@@ -1,3 +1,4 @@
+
 Copyright (c) 2009-2012 Bitcoin Developers
 Distributed under the MIT/X11 software license, see the accompanying
 file license.txt or https://opensource.org/licenses/mit-license.php.
@@ -14,9 +15,9 @@ To Build
 --------
 
 cd src/
-make -f makefile.unix            # Headless RussiaCoin
+make -f makefile.unix            # Headless russiacoin
 
-See readme-qt.rst for instructions on building RussiaCoin QT,
+See readme-qt.rst for instructions on building russiacoin QT,
 the graphical bitcoin.
 
 Dependencies
@@ -75,7 +76,7 @@ If using Boost 1.37, append -mt to the boost libraries in the makefile.
 Dependency Build Instructions: Gentoo
 -------------------------------------
 
-Note: If you just want to install russiacoind on Gentoo, you can add the RussiaCoin
+Note: If you just want to install russiacoind on Gentoo, you can add the russiacoin
       overlay and use your package manager:
           layman -a russiacoin && emerge russiacoind
 
@@ -119,7 +120,7 @@ sudo su
 
 Security
 --------
-To help make your RussiaCoin installation more secure by making certain attacks impossible to
+To help make your russiacoin installation more secure by making certain attacks impossible to
 exploit even if a vulnerability is found, you can take the following measures:
 
 * Position Independent Executable
@@ -157,3 +158,4 @@ exploit even if a vulnerability is found, you can take the following measures:
     RW- R-- RW-
 
     The STK RW- means that the stack is readable and writeable but not executable.
+
