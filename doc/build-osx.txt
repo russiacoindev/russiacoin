@@ -32,7 +32,7 @@ git clone https://github.com/Laputaria/RC.git russiacoin
 
 2.  Download and install MacPorts from https://www.macports.org/
 
-2a. (for 10.15 Mokave)
+2a. (for 10.15 Mohavy)
     Edit /opt/local/etc/macports/macports.conf and uncomment "build_arch i386"
 
 3.  Install dependencies from MacPorts
