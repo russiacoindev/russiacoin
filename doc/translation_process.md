@@ -34,7 +34,7 @@ This directory contains all translations. Filenames must adhere to this format:
 `src/qt/locale/russiacoin_ru.ts` is treated in a special way. It is used as the
 source for all other translations. Whenever a string in the code is changed
 this file must be updated to reflect those changes. Usually, this can be
-accomplished by running `lupdate` (included in the Qt SDK).
+accomplished by running `lupdate` (included in the qt SDK).
 
 An updated source file should be merged to github and transifex will pick it
 up from there. Afterwards the new strings show up as "Remaining" in transifex
