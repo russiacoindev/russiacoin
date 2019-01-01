@@ -1,3 +1,4 @@
+
 Copyright (c) 2009-2012 Bitcoin Developers
 Distributed under the MIT/X11 software license, see the accompanying
 file license.txt or https://opensource.org/licenses/mit-license.php.
@@ -7,7 +8,7 @@ cryptographic software written by Eric Young (eay@cryptsoft.com) and UPnP
 software written by Thomas Bernard.
 
 
-See readme-qt.rst for instructions on building RussiaCoin QT, the
+See readme-qt.rst for instructions on building russiacoin QT, the
 graphical user interface.
 
 WINDOWS BUILD NOTES
@@ -76,9 +77,10 @@ make -f Makefile.mingw
 mkdir miniupnpc
 cp *.h miniupnpc/
 
-RussiaCoin (RC)
+russiacoin (RC)
 -------
 DOS prompt:
 cd \RC\src
 mingw64-make -f makefile.mingw
 strip russiacoind.exe
+
