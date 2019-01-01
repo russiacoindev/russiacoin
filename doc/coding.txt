@@ -1,3 +1,4 @@
+
 Please be consistent with the existing coding style.
 
 Block style:
@@ -90,10 +91,11 @@ in 500ms.
 ThreadRPCServer : Remote procedure call handler, listens on port 8332
 for connections and services them.
 
-ThreadRussiacoinMiner : Generates russiacoins
+ThreadRussiacoinMiner : Generates russiacoin
 
 ThreadMapPort : Universal plug-and-play startup/shutdown
 
 Shutdown : Does an orderly shutdown of everything
 
 ExitTimeout : Windows-only, sleeps 5 seconds then exits application
+
