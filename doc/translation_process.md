@@ -1,3 +1,4 @@
+
 Translations
 ============
 
@@ -18,7 +19,7 @@ This file must be updated whenever a new translation is added. Please note that
 files must end with `.qm`, not `.ts`.
 
     <qresource prefix="/translations">
-        <file alias="en">locale/russiacoin_en.qm</file>
+        <file alias="ru">locale/russiacoin_ru.qm</file>
         ...
     </qresource>
 
@@ -30,7 +31,7 @@ This directory contains all translations. Filenames must adhere to this format:
 
 #### Source file
 
-`src/qt/locale/russiacoin_en.ts` is treated in a special way. It is used as the
+`src/qt/locale/russiacoin_ru.ts` is treated in a special way. It is used as the
 source for all other translations. Whenever a string in the code is changed
 this file must be updated to reflect those changes. Usually, this can be
 accomplished by running `lupdate` (included in the Qt SDK).
@@ -55,20 +56,20 @@ config to be able to connect with the client.
     [main]
     host = https://www.transifex.net
 
-    [bitcoin.tx]
+    [russiacoin.tx]
     file_filter = src/qt/locale/russiacoin_<lang>.ts
-    source_file = src/qt/locale/russiacoin_en.ts
-    source_lang = en
+    source_file = src/qt/locale/russiacoin_ru.ts
+    source_lang = ru
     
 ### .tx/config (for Windows)
 
     [main]
     host = https://www.transifex.net
 
-    [bitcoin.tx]
+    [russiacoin.tx]
     file_filter = src\qt\locale\russiacoin_<lang>.ts
-    source_file = src\qt\locale\russiacoin_en.ts
-    source_lang = en
+    source_file = src\qt\locale\russiacoin_ru.ts
+    source_lang = ru
 
 It is also possible to directly download new translations one by one from transifex.
 
@@ -78,3 +79,4 @@ It is also possible to directly download new translations one by one from transi
 2. update `src/qt/russiacoin.qrc` manually or via
    `ls src/qt/locale/*ts|xargs -n1 basename|sed 's/\(russiacoin_\(.*\)\).ts/<file alias="\2">locale/\1.qm<\/file>/'`
 3. `git add` new translations from `src/qt/locale/`
+
