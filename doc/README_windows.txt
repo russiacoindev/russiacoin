@@ -1,10 +1,10 @@
 
-Copyright (c) 2013-2014 RussiaCoin Developers
+Copyright (c) 2019 RussiaCoin Developers
 
 
 RussiaCoin 1.3.7
 
-Copyright (c) 2013-2014 RussiaCoin Developers
+Copyright (c) 2013-2019 RussiaCoin Developers
 Copyright (c) 2013 NovaCoin Developers
 Copyright (c) 2011-2012 Bitcoin Developers
 Distributed under the MIT/X11 software license, see the accompanying
