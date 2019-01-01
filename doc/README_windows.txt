@@ -2,7 +2,7 @@
 Copyright (c) 2019 russiacoin developers
 
 
-RussiaCoin 1.3.7
+russiacoin 1.3.7
 
 Copyright (c) 2013-2019 russiacoin developers
 Copyright (c) 2013 NovaCoin Developers
@@ -50,4 +50,3 @@ See the documentation/wiki at the russiacoin site:
   https://russiacoin.info/
   https://russiacoin.info/blog/
 for help and more information.
-
