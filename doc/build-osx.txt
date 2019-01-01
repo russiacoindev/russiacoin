@@ -8,7 +8,7 @@ software written by Eric Young (eay@cryptsoft.com) and UPnP software written by
 Thomas Bernard.
 
 
-Mac OS X russiacoin build instructions
+macOS X russiacoin build instructions
 Laszlo Hanyecz <solar@heliacal.net>
 Douglas Huff <dhuff@jrbobdobbs.org>
 
@@ -16,7 +16,7 @@ Douglas Huff <dhuff@jrbobdobbs.org>
 See readme-qt.rst for instructions on building russiacoin QT, the
 graphical user interface.
 
-Tested on 10.14 and 10.14.2 intel.  PPC is not supported because it's big-endian.
+Tested on 10.14.1 and 10.14.2 intel.  PPC is not supported because it's big-endian.
 
 All of the commands should be executed in terminal.app.. it's in
 /Applications/Utilities
@@ -32,7 +32,7 @@ git clone https://github.com/Laputaria/RC.git russiacoin
 
 2.  Download and install MacPorts from https://www.macports.org/
 
-2a. (for 10.14 Mojave)
+2a. (for 10.15 Mokave)
     Edit /opt/local/etc/macports/macports.conf and uncomment "build_arch i386"
 
 3.  Install dependencies from MacPorts
