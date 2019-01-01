@@ -18,7 +18,7 @@ cd src/
 make -f makefile.unix            # Headless russiacoin
 
 See readme-qt.rst for instructions on building russiacoin QT,
-the graphical bitcoin.
+the graphical russiacoin.
 
 Dependencies
 ------------
