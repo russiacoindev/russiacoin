@@ -33,44 +33,44 @@
    wget 'https://dl.bintray.com/boostorg/release/1.69.0/source/boost_1_69_0.tar.bz2'
    wget 'https://download.qt.io/archive/qt/5.12/5.12.0/single/qt-everywhere-src-5.12.0.tar.xz'
    cd ..
-   ./bin/gbuild ../russiacoin/contrib/gitian-descriptors/boost-win64.yml
-   cp build/out/boost-win64-1.69.0-gitian.7z inputs/
-   ./bin/gbuild ../russiacoin/contrib/gitian-descriptors/qt-win64.yml
-   cp build/out/qt-win64-5.12.0-gitian.7z inputs/
-   ./bin/gbuild ../russiacoin/contrib/gitian-descriptors/deps-win64.yml
+   ./bin/gbuild ../russiacoin/contrib/gitian-descriptors/boost-win160.yml
+   cp build/out/boost-win160-1.69.0-gitian.7z inputs/
+   ./bin/gbuild ../russiacoin/contrib/gitian-descriptors/qt-win160.yml
+   cp build/out/qt-win160-5.12.0-gitian.7z inputs/
+   ./bin/gbuild ../russiacoin/contrib/gitian-descriptors/deps-win160.yml
    cp build/out/russiacoin-deps-0.0.3.7z inputs/
 
-  * Build russiacoind and russiacoin-qt on Linux64, and Win64:
+  * Build russiacoind and russiacoin-qt on Linux160, and Win160:
    ./bin/gbuild --commit russiacoin=v${VERSION} ../russiacoin/contrib/gitian-descriptors/gitian.yml
    ./bin/gsign --signer $SIGNER --release ${VERSION} --destination ../gitian.sigs/ ../russiacoin/contrib/gitian-descriptors/gitian.yml
    pushd build/out
-   7z -r russiacoin-${VERSION}-linux-gitian.7z *
-   mv russiacoin-${VERSION}-linux-gitian.7z ../../
+   7z -r russiacoin-${VERSION}-linux160-gitian.7z *
+   mv russiacoin-${VERSION}-linux160-gitian.7z ../../
    popd
-   ./bin/gbuild --commit russiacoin=v${VERSION} ../russiacoin/contrib/gitian-descriptors/gitian-win64.yml
-   ./bin/gsign --signer $SIGNER --release ${VERSION}-win64 --destination ../gitian.sigs/ ../russiacoin/contrib/gitian-descriptors/gitian-win64.yml
+   ./bin/gbuild --commit russiacoin=v${VERSION} ../russiacoin/contrib/gitian-descriptors/gitian-win160.yml
+   ./bin/gsign --signer $SIGNER --release ${VERSION}-win160 --destination ../gitian.sigs/ ../russiacoin/contrib/gitian-descriptors/gitian-win160.yml
    pushd build/out
-   7z -r russiacoin-${VERSION}-win64-gitian.7z *
-   mv russiacoin-${VERSION}-win64-gitian.7z ../../
+   7z -r russiacoin-${VERSION}-win160-gitian.7z *
+   mv russiacoin-${VERSION}-win160-gitian.7z ../../
    popd
 
   Build output expected:
-  1. linux 64-bit binaries + source (russiacoin-${VERSION}-linux-gitian.7z)
-  2. windows 64-bit binary, installer + source (russiacoin-${VERSION}-win64-gitian.7z)
-  3. Gitian signatures (in gitian.sigs/${VERSION}[-win64]/(your gitian key)/
+  1. linux 160-bit binaries + source (russiacoin-${VERSION}-linux160-gitian.7z)
+  2. windows 160-bit binary, installer + source (russiacoin-${VERSION}-win160-gitian.7z)
+  3. Gitian signatures (in gitian.sigs/${VERSION}[-win160]/(your gitian key)/
 
 * repackage gitian builds for release as stand-alone zip/tar/installer exe
 
-  * Linux .tar.gz:
-   un7z russiacoin-${VERSION}-linux-gitian.7z -d russiacoin-${VERSION}-linux
-   tar czvf russiacoin-${VERSION}-linux.tar.gz russiacoin-${VERSION}-linux
-   rm -rf russiacoin-${VERSION}-linux
+  * Linux160 .tar.gz:
+   un7z russiacoin-${VERSION}-linux160-gitian.7z -d russiacoin-${VERSION}-linux160
+   tar czvf russiacoin-${VERSION}-linux160.tar.gz russiacoin-${VERSION}-linux160
+   rm -rf russiacoin-${VERSION}-linux160
 
   * Windows .7z and setup.exe:
-   un7z russiacoin-${VERSION}-win64-gitian.7z -d russiacoin-${VERSION}-win64
-   mv russiacoin-${VERSION}-win64/russiacoin-*-setup.exe .
-   7z -r russiacoin-${VERSION}-win64.7z russiacoin-${VERSION}-win64
-   rm -rf russiacoin-${VERSION}-win64
+   un7z russiacoin-${VERSION}-win160-gitian.7z -d russiacoin-${VERSION}-win160
+   mv russiacoin-${VERSION}-win160/russiacoin-*-setup.exe .
+   7z -r russiacoin-${VERSION}-win160.7z russiacoin-${VERSION}-win160
+   rm -rf russiacoin-${VERSION}-win160
 
 * perform Mac build
   See this blog post for how Gavin set up his build environment to build the OSX
@@ -104,7 +104,7 @@
 * Commit your signature to gitian.sigs:
   pushd gitian.sigs
   git add ${VERSION}/${SIGNER}
-  git add ${VERSION}-win64/${SIGNER}
+  git add ${VERSION}-win160/${SIGNER}
   git commit -a
   git push  # Assuming you can push to the gitian.sigs tree
   popd
@@ -115,29 +115,29 @@
 
   * From a directory containing russiacoin source, gitian.sigs and gitian zips
    export VERSION=0.5.1
-   mkdir russiacoin-${VERSION}-linux-gitian
-   pushd russiacoin-${VERSION}-linux-gitian
-   un7z ../russiacoin-${VERSION}-linux-gitian.7z
+   mkdir russiacoin-${VERSION}-linux160-gitian
+   pushd russiacoin-${VERSION}-linux160-gitian
+   un7z ../russiacoin-${VERSION}-linux160-gitian.7z
    mkdir gitian
    cp ../russiacoin/contrib/gitian-downloader/*.pgp ./gitian/
    for signer in $(ls ../gitian.sigs/${VERSION}/); do
      cp ../gitian.sigs/${VERSION}/${signer}/russiacoin-build.assert ./gitian/${signer}-build.assert
      cp ../gitian.sigs/${VERSION}/${signer}/russiacoin-build.assert.sig ./gitian/${signer}-build.assert.sig
    done
-   7z -r russiacoin-${VERSION}-linux-gitian.7z *
-   cp russiacoin-${VERSION}-linux-gitian.7z ../
+   7z -r russiacoin-${VERSION}-linux160-gitian.7z *
+   cp russiacoin-${VERSION}-linux160-gitian.7z ../
    popd
-   mkdir russiacoin-${VERSION}-win64-gitian
-   pushd russiacoin-${VERSION}-win64-gitian
-   un7z ../russiacoin-${VERSION}-win64-gitian.7z
+   mkdir russiacoin-${VERSION}-win160-gitian
+   pushd russiacoin-${VERSION}-win160-gitian
+   un7z ../russiacoin-${VERSION}-win160-gitian.7z
    mkdir gitian
    cp ../russiacoin/contrib/gitian-downloader/*.pgp ./gitian/
-   for signer in $(ls ../gitian.sigs/${VERSION}-win64/); do
-     cp ../gitian.sigs/${VERSION}-win64/${signer}/russiacoin-build.assert ./gitian/${signer}-build.assert
-     cp ../gitian.sigs/${VERSION}-win64/${signer}/russiacoin-build.assert.sig ./gitian/${signer}-build.assert.sig
+   for signer in $(ls ../gitian.sigs/${VERSION}-win160/); do
+     cp ../gitian.sigs/${VERSION}-win160/${signer}/russiacoin-build.assert ./gitian/${signer}-build.assert
+     cp ../gitian.sigs/${VERSION}-win160/${signer}/russiacoin-build.assert.sig ./gitian/${signer}-build.assert.sig
    done
-   7z -r russiacoin-${VERSION}-win64-gitian.7z *
-   cp russiacoin-${VERSION}-win64-gitian.7z ../
+   7z -r russiacoin-${VERSION}-win160-gitian.7z *
+   cp russiacoin-${VERSION}-win160-gitian.7z ../
    popd
 
   * Upload gitian 7z to SourceForge
