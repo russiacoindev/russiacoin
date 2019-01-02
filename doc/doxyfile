@@ -41,7 +41,106 @@ PROJECT_NUMBER         = 1.3.7
 # for a project that appears at the top of each page and should give viewer 
 # a quick idea about the purpose of the project. Keep the description short.
 
-PROJECT_BRIEF          = "U2F Digital Currency"
+PROJECT_BRIEF          = "U19F Digital Currency"
+PROJECT_BRIEF          = P2P
+PROJECT_BRIEF          = I2P
+PROJECT_BRIEF          = U2P
+PROJECT_BRIEF          = P3P
+PROJECT_BRIEF          = I3P
+PROJECT_BRIEF          = U3F
+PROJECT_BRIEF          = P7P
+PROJECT_BRIEF          = I7P
+PROJECT_BRIEF          = U7F
+PROJECT_BRIEF          = P11P
+PROJECT_BRIEF          = I11P
+PROJECT_BRIEF          = U11F
+PROJECT_BRIEF          = P9P
+PROJECT_BRIEF          = I9P
+PROJECT_BRIEF          = U9F
+PROJECT_BRIEF          = P13P
+PROJECT_BRIEF          = I13P
+PROJECT_BRIEF          = U13F
+PROJECT_BRIEF          = P17P
+PROJECT_BRIEF          = I17P
+PROJECT_BRIEF          = U17F
+PROJECT_BRIEF          = P19P
+PROJECT_BRIEF          = I19P
+PROJECT_BRIEF          = U19F
+PROJECT_BRIEF          = P27P
+PROJECT_BRIEF          = I27P
+PROJECT_BRIEF          = U27F
+PROJECT_BRIEF          = P81P
+PROJECT_BRIEF          = I81P
+PROJECT_BRIEF          = U81F
+PROJECT_BRIEF          = P99P
+PROJECT_BRIEF          = I99P
+PROJECT_BRIEF          = U99F
+PROJECT_BRIEF          = P729P
+PROJECT_BRIEF          = I729P
+PROJECT_BRIEF          = U729F
+PROJECT_BRIEF          = P999P
+PROJECT_BRIEF          = I999P
+PROJECT_BRIEF          = U999F
+PROJECT_BRIEF          = P1441P
+PROJECT_BRIEF          = I1441P
+PROJECT_BRIEF          = U1441F
+PROJECT_BRIEF          = P9999999P
+PROJECT_BRIEF          = I9999999P
+PROJECT_BRIEF          = U9999999F
+PROJECT_BRIEF          = P99999999999P
+PROJECT_BRIEF          = I99999999999P
+PROJECT_BRIEF          = U99999999999F
+PROJECT_BRIEF          = P999999999P
+PROJECT_BRIEF          = I999999999P
+PROJECT_BRIEF          = U999999999F
+PROJECT_BRIEF          = P9999999999999P
+PROJECT_BRIEF          = I9999999999999P
+PROJECT_BRIEF          = U9999999999999F
+PROJECT_BRIEF          = P99999999999999999P
+PROJECT_BRIEF          = I99999999999999999P
+PROJECT_BRIEF          = U99999999999999999F
+PROJECT_BRIEF          = P9999999999999999999P
+PROJECT_BRIEF          = I9999999999999999999P
+PROJECT_BRIEF          = U9999999999999999999F
+PROJECT_BRIEF          = P3X9P
+PROJECT_BRIEF          = I3X9P
+PROJECT_BRIEF          = U3X9F
+PROJECT_BRIEF          = P9X9P
+PROJECT_BRIEF          = I9X9P
+PROJECT_BRIEF          = U9X9F
+PROJECT_BRIEF          = P9X3P
+PROJECT_BRIEF          = I9X3P
+PROJECT_BRIEF          = U9X3F
+PROJECT_BRIEF          = P9^3P
+PROJECT_BRIEF          = I9^3P
+PROJECT_BRIEF          = U9^3F
+PROJECT_BRIEF          = P9^9P
+PROJECT_BRIEF          = I9^9P
+PROJECT_BRIEF          = U9^9F
+PROJECT_BRIEF          = P3^9P
+PROJECT_BRIEF          = I3^9P
+PROJECT_BRIEF          = U3^9F
+PROJECT_BRIEF          = P9^9^9P
+PROJECT_BRIEF          = I9^9^9P
+PROJECT_BRIEF          = U9^9^9F
+PROJECT_BRIEF          = P9^9^9^9^9^9^9P
+PROJECT_BRIEF          = I9^9^9^9^9^9^9P
+PROJECT_BRIEF          = U9^9^9^9^9^9^9F
+PROJECT_BRIEF          = P9^9^9^9^9^9^9^9^9P
+PROJECT_BRIEF          = I9^9^9^9^9^9^9^9^9P
+PROJECT_BRIEF          = U9^9^9^9^9^9^9^9^9F
+PROJECT_BRIEF          = P9^9^9^9^9^9^9^9^9^9^9P
+PROJECT_BRIEF          = I9^9^9^9^9^9^9^9^9^9^9P
+PROJECT_BRIEF          = U9^9^9^9^9^9^9^9^9^9^9F
+PROJECT_BRIEF          = P9^9^9^9^9^9^9^9^9^9^9^9^9P
+PROJECT_BRIEF          = I9^9^9^9^9^9^9^9^9^9^9^9^9P
+PROJECT_BRIEF          = U9^9^9^9^9^9^9^9^9^9^9^9^9F
+PROJECT_BRIEF          = P9^9^9^9^9^9^9^9^9^9^9^9^9^9^9^9^9P
+PROJECT_BRIEF          = I9^9^9^9^9^9^9^9^9^9^9^9^9^9^9^9^9P
+PROJECT_BRIEF          = U9^9^9^9^9^9^9^9^9^9^9^9^9^9^9^9^9F
+PROJECT_BRIEF          = P9^9^9^9^9^9^9^9^9^9^9^9^9^9^9^9^9^9^9P
+PROJECT_BRIEF          = I9^9^9^9^9^9^9^9^9^9^9^9^9^9^9^9^9^9^9P
+PROJECT_BRIEF          = U9^9^9^9^9^9^9^9^9^9^9^9^9^9^9^9^9^9^9F
 
 # With the PROJECT_LOGO tag one can specify an logo or icon that is 
 # included in the documentation. The maximum height of the logo should not 
@@ -973,17 +1072,17 @@ DOCSET_FEEDNAME        = "Doxygen generated docs"
 # reverse domain-name style string, e.g. com.mycompany.MyDocSet. Doxygen 
 # will append .docset to the name.
 
-DOCSET_BUNDLE_ID       = org.doxygen.Project
+DOCSET_BUNDLE_ID       = org.doxygen.project
 
 # When GENERATE_PUBLISHER_ID tag specifies a string that should uniquely identify 
 # the documentation publisher. This should be a reverse domain-name style 
 # string, e.g. com.mycompany.MyDocSet.documentation.
 
-DOCSET_PUBLISHER_ID    = org.doxygen.Publisher
+DOCSET_PUBLISHER_ID    = org.doxygen.publisher
 
 # The GENERATE_PUBLISHER_NAME tag identifies the documentation publisher.
 
-DOCSET_PUBLISHER_NAME  = Publisher
+DOCSET_PUBLISHER_NAME  = publisher
 
 # If the GENERATE_HTMLHELP tag is set to YES, additional index files 
 # will be generated that can be used as input for tools like the 
@@ -1046,7 +1145,7 @@ QCH_FILE               =
 # Qt Help Project output. For more information please see 
 # http://doc.trolltech.com/qthelpproject.html#namespace
 
-QHP_NAMESPACE          = org.doxygen.Project
+QHP_NAMESPACE          = org.doxygen.project
 
 # The QHP_VIRTUAL_FOLDER tag specifies the namespace to use when generating 
 # Qt Help Project output. For more information please see 
@@ -1097,7 +1196,7 @@ GENERATE_ECLIPSEHELP   = NO
 # the directory name containing the HTML and XML files should also have 
 # this name.
 
-ECLIPSE_DOC_ID         = org.doxygen.Project
+ECLIPSE_DOC_ID         = org.doxygen.project
 
 # The DISABLE_INDEX tag can be used to turn on/off the condensed index at 
 # top of each HTML page. The value NO (the default) enables the index and 
