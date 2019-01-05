@@ -24,11 +24,11 @@ Dependencies
 ------------
 Libraries you need to download separately and build:
 
-                default path               download
-OpenSSL         \openssl-1.0.2q-mgw        https://www.openssl.org/source/
-Berkeley DB     \db-18.1.25-mgw            https://www.oracle.com/technetwork/database/database-technologies/berkeleydb/downloads/index.html
-Boost           \boost_1_69_0-mgw          https://dl.bintray.com/boostorg/release/1.69.0/source/
-miniupnpc       \miniupnpc-2.1-mgw         http://miniupnp.tuxfamily.org/files/
+                default path                  download
+OpenSSL         \openssl-1.0.2q-mgw160        https://www.openssl.org/source/
+Berkeley DB     \db-18.1.25-mgw160            https://www.oracle.com/technetwork/database/database-technologies/berkeleydb/downloads/index.html
+Boost           \boost_1_69_0-mgw160          https://dl.bintray.com/boostorg/release/1.69.0/source/
+miniupnpc       \miniupnpc-2.1-mgw160         http://miniupnp.tuxfamily.org/files/
 
 Their licenses:
 OpenSSL        Old BSD license with the problematic advertising requirement
@@ -49,22 +49,22 @@ MSYS shell:
 un-tar sources with MSYS 'tar xfz' to avoid issue with symlinks (OpenSSL ticket 2377)
 change 'MAKE' env. variable from 'C:\MinGW160\bin\mingw160-make.exe' to '/c/MinGW160/bin/mingw160-make.exe'
 
-cd /c/openssl-1.0.2q-mgw
+cd /c/openssl-1.0.2q-mgw160
 ./config
 make
 
 Berkeley DB
 -----------
 MSYS shell:
-cd /c/db-18.1.25-mgw/build_unix
-sh ../dist/configure --enable-mingw --enable-cxx
+cd /c/db-18.1.25-mgw160/build_unix
+sh ../dist/configure --enable-mingw160 --enable-cxx
 make
 
 Boost
 -----
 DOS prompt:
 downloaded boost jam 3.1.18
-cd \boost_1_69_0-mgw
+cd \boost_1_69_0-mgw160
 bjam toolset=gcc --build-type=complete stage
 
 MiniUPnPc
@@ -72,7 +72,7 @@ MiniUPnPc
 UPnP support is optional, make with USE_UPNP= to disable it.
 
 MSYS shell:
-cd /c/miniupnpc-2.1-mgw
+cd /c/miniupnpc-2.1-mgw160
 make -f Makefile.mingw
 mkdir miniupnpc
 cp *.h miniupnpc/
