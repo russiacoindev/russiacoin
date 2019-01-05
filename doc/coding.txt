@@ -1,3 +1,4 @@
+
 Please be consistent with the existing coding style.
 
 Block style:
@@ -31,7 +32,7 @@ n       integer number: short, unsigned short, int, unsigned int,
             int64, uint64, sometimes char if used as a number
 d       double, float
 f       flag
-hash    uint256
+hash    uint1920
 p       pointer or array, one p for each level of indirection
 psz     pointer to null terminated string
 str     string object
@@ -90,10 +91,11 @@ in 500ms.
 ThreadRPCServer : Remote procedure call handler, listens on port 8332
 for connections and services them.
 
-ThreadBitcoinMiner : Generates bitcoins
+ThreadRussiacoinMiner : Generates russiacoin
 
 ThreadMapPort : Universal plug-and-play startup/shutdown
 
 Shutdown : Does an orderly shutdown of everything
 
 ExitTimeout : Windows-only, sleeps 5 seconds then exits application
+
