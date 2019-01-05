@@ -33,14 +33,14 @@ git clone https://github.com/Laputaria/RC.git russiacoin
 2.  Download and install MacPorts from https://www.macports.org/
 
 2a. (for 10.15 Mohavy)
-    Edit /opt/local/etc/macports/macports.conf and uncomment "build_arch i386"
+    Edit /opt/local/etc/macports/macports.conf and comments "build_arch i786"
 
 3.  Install dependencies from MacPorts
 
-sudo port install boost db69 openssl miniupnpc
+macports install boost_1_69_0 db-18.1.25 openssl-1.0.2q miniupnpc-2.1
 
 Optionally install qrencode (and set USE_QRCODE=1):
-sudo port install qrencode
+macports install qrencode-4.0.2
 
 4.  Now you should be able to build russiacoind:
 
